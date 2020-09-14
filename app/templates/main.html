@@ -8,43 +8,30 @@
         <title>Bootstrap Portfolio Page Template</title>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="static/css/bootstrap.css">
-        <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Navbar</a>
-            <div class="collapse navbar-collapse">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto">         
-                <li class="nav-item">
-                    <a class="nav-link" href="/academics">Academics</a>
-                </li>
-                    
-                <li class="nav-item">
-                    <a class="nav-link" href="/programming">Programming</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/projects">Projects</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/volunteering">Volunteering</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/rocketry">Rocketry</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="/sports">Sports</a>
-                </li>
+                  {% for item in navbar %}
+                    <li class="nav-item {{item.active}}">
+                      <a class="nav-link" href="{{item.link}}">{{item.name}}</a>
+                    </li>
+                  {% endfor %}    
                 </ul>
                 
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+                <form class="d-none d-lg-block form-inline p-2">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+          </div>
         </nav>
 
         <section>
@@ -52,20 +39,37 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <h1>Lorem ipsum dolor sit.</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, deleniti, ea nisi suscipit atque tempore aspernatur harum unde veritatis neque rem dolores assumenda. Recusandae facilis dolores cum iste assumenda accusamus.</p>
-                  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+                  <h1>Ethan Armstrong</h1>
+                  <p>This is where the summary will go. This should be multiple paragraphs about me</p>
+                  <p><a class="btn btn-primary btn-lg" href="/academics" role="button">Learn more</a></p>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-4 text-center">
+                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+              </div>
+              <div class="col-4 text-center">
+                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+              </div>
+              <div class="col-4 text-center">
+                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr>
         <section>
           <div class="container">
             <div class="row">
               <div class="col-12 text-center">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
+                <h1>What I Do</h1>
+                <p>A quick summary of what I do, and what my interests are. Could possiley delete later</p>
               </div>
             </div>
           </div>
@@ -76,10 +80,10 @@
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Generic placeholder image">
+                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="programming image">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      <h5 class="mt-0 mb-1">Programming</h5>
+                      Explanation of whatever project I chose
                     </div>
                   </li>
                 </ul>
@@ -87,10 +91,10 @@
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Generic placeholder image">
+                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Sports Image">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      <h5 class="mt-0 mb-1">Football</h5>
+                      Explanation of Football
                     </div>
                   </li>
                 </ul>
@@ -98,10 +102,10 @@
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Generic placeholder image">
+                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Rocketry image">
                     <div class="media-body">
-                      <h5 class="mt-0 mb-1">List-based media object</h5>
-                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
+                      <h5 class="mt-0 mb-1">Rocketry</h5>
+                      Explanation of Rocketry
                     </div>
                   </li>
                 </ul>
@@ -109,6 +113,7 @@
             </div>
           </div>
         </section>
+        <!--
         <section>
           <div class="container">
             <div class="row">
@@ -119,21 +124,21 @@
             </div>
             <div class="row">
               <div class="col-md-6 col-12 text-center">
-                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="">
+                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="image1">
                 <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
                 <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
               </div>
               <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
-                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="">
+                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="iamge2">
                 <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
                 <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
               </div>
             </div>
             <div class="row mt-2">
-              <div class="col-md-3 col-6"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
+              <div class="col-md-3 col-6"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
+              <div class="col-md-3 col-6"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
+              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
+              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
             </div>
             <hr>
             <div class="row">
@@ -144,6 +149,7 @@
             </div>
           </div>
         </section>
+        -->
         <hr>
         <section>
           <div class="container">
@@ -160,11 +166,7 @@
         <div class="section">
           <div class="container">
             <div class="row">
-              <div class="col-md-4 col-12">
-                <h3 class="text-center">WHO WE ARE</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ducimus, sit, quibusdam quidem recusandae veniam eos quod error nisi repellat excepturi laboriosam aspernatur suscipit possimus consectetur dolores nihil labore quas eius illo accusamus nulla sed blanditiis porro accusantium. Perspiciatis, perferendis!</p>
-              </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-6 col-12">
                 <h3 class="text-center">GET IN TOUCH</h3>
                 <address class="text-center">
                   <strong>MyCompany, Inc.</strong><br>
@@ -173,7 +175,7 @@
                   <abbr title="Phone">P:</abbr> (123) 456-7890
                 </address>
               </div>
-              <div class="col-md-4 col-12">
+              <div class="col-md-6 col-12">
                 <h3 class="text-center">NEWSLETTER</h3>
                 <form>
                   <div class="form-group col-12">
@@ -186,19 +188,11 @@
           </div>
         </div>
         <hr>
-        <footer class="text-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <p>Copyright © MyCompany. All rights reserved.</p>
-              </div>
-            </div>
-          </div>
-        </footer>
+
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/js/jquery-3.4.1.min.js"></script>
+        <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/js/popper.min.js"></script>
-        <script src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/js/bootstrap-4.4.1.js"></script>
+        <script src="static/js/bootstrap.js"></script>
       </body>
 </html>

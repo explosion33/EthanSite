@@ -10,7 +10,7 @@ log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
 
-def getNavbar(route):
+def getNavbar(route=None):
     navbar=[
         {
             "link": "/academics",
@@ -43,10 +43,10 @@ def getNavbar(route):
             "active": "",
         }, 
     ]
-
-    for item in navbar:
-        if item["link"] == request.path:
-            item["active"] = "active"
+    if route:
+        for item in navbar:
+            if item["link"] == request.path:
+                item["active"] = "active"
     
     return navbar
 
@@ -54,7 +54,7 @@ def getNavbar(route):
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template("main.html", head="Start of Website")
+    return render_template("main.html", navbar=getNavbar())
 
 @app.route('/academics', methods=['GET', 'POST'])
 def academics():

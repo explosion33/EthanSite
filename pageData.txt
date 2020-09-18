@@ -1,0 +1,133 @@
+#Group Types:
+#text       : stadard paragraph on left with an image field on the right (not specifying a type will default to this)
+#list       : a bulleted list
+#video      : a video, can do path or url
+#imageGroup : a slideshow, carousel, of images. (Images should be cropped to the same dimesnions otherwise formatting will mess up) 
+#
+[
+    {
+        "root": "",
+        "title": "Academic Highlights",
+        "sections": [
+                {
+                    "title": "Aliso Niguel High School",
+                    "groups": [
+                        {
+                            "text": "I have a 4.0 at Aliso Niguel Highschool, and have taken 5 AP's: AP Physics, AP Chemistry, AP Computer Science, AP Calc AB and AP Calc BC. In School, I get mostly A's and B's",
+                            "image": "academics/ANLogo.png",
+                            "size": "30%",
+                        },
+                    ],
+                },
+
+                {
+                    "title": "Other Education",
+                    "groups": [
+                        {
+                            "text": "I have taken two Classes from Saddleback College, one was a history class for fun, the other was a Visual Performing Art for school. I am also going to take a class from Foothill College, intro to C++. I am taking this class to expand my portfolio, and hopefully get some college credits.",
+                            "image": "academics/SBCLogo.png",
+                            "size": "30%",
+                        },
+                        {
+                            "text": "In 2018 I took an online class at Udacity. I earned a Nano-Degree in Python, Html, and C++. I also have been to a couple programming camps, such as ID-Tech, which helped inspire me to program.",
+                            "image": "academics/udacity_cert.png",
+                            "size": "35%",
+                        },
+                    ],
+                },
+
+                {
+                    "title": "Work Experience",
+                    "groups": [
+                        {
+                            "text": "I am a self-employed tutor. I tutor two highschoolers in Math, and Science and have been doing so for four years. On top of Tutoring, I also do occasional Freelance projects and provide technical support. These range from fixing my neighbors computer to designing websites for my school's football team",
+                            "image": "blank.png",
+                            "size": "1%"
+                        },
+
+                    ],
+                },
+        ],
+    }, #academics page
+
+    {
+        "root": "",
+        "title": "Skills",
+        "sections": [
+                {
+                    "title": "Programming",
+                    "groups": [
+                        {
+                            "text": "I have been programming for about 10 years. I started learning Java, and have later expanded into Python, C++, Html, Css, JavaScript, Batch, and Lua, depending on what I wanted to make. Some of the things I have made so far include:",
+                            "image": "holder.png",
+                            "size": "30%",
+                        },
+                        {
+                            "type": "list",
+                            "text": ["Hand Writing Generator", "Headless Bluetooth Controller", "Remote File Transfer", "Car Audio System", "ANHS Registration Site"],
+                        },
+                        {
+                            "type": "text",
+                            "text": "https://github.com/explosion33",
+                            "link": "https://github.com/explosion33",
+                            "image": "holder.png",
+                            "size": "1%"
+                        },
+                    ],
+                },
+                
+                
+
+        ],
+    }, #Skills page
+
+    {
+        "root": "",
+        "title": "Rocketry",
+        "sections": [
+                {
+                    "title": "2016-2018",
+                    "groups": [
+                        {
+                            "text": "I first started building rockets with my dad. We started by building small cardboard rockets, they weighed less than a pound and only got up to three feet.",
+                            "image": "holder.png",
+                            "imLink": "https://www.google.com",
+                            "size": "40%",
+                        },
+                        {
+                            "text": "We eventually started moving up, we built fiberglass rockets with electroinc shcute deoplyment and telemetry. We drove hours to get to launch sites and spent every day during summer building and tinkering. We launched up to a class two rocket, but had to stop when things got too busy with school and sports",
+                            "image": "holder.png",
+                            "size": "40%",
+                        },
+
+                        {
+                            "type": "video",
+                            "path": "schuteTest.mp4",
+                            "size": "40%",
+                            "aspect": "16by9",
+                        },
+
+                    ],
+                },
+
+                {
+                    "title": "ANARC",
+                    "groups": [
+                        {
+                            "text": "Now that I am a senior, I am starting the Aliso Niguel Amateur Rocketry Club with some of my friends. We are planning to get certified for class two rocket launches before the end of second semester, then build bigger and bett rockets.",
+                            "image": "rocketry/ANARC.png",
+                            "size": "70%",
+                        },
+                        {
+                            "type": "imageGroup",
+                            "text": ["rocketry/ANARC.png", "holder2.png", "holder.png", "holder.png", "holder2.png", "holder.png", "holder2.png",],
+                            "size": "70%",
+                        },
+
+                    ],
+                },
+
+        ],
+    }, #Rocketry page
+
+]

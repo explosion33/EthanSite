@@ -7,9 +7,9 @@
         <meta name="HandheldFriendly" content="true">
         <title>Bootstrap Portfolio Page Template</title>
         <!-- Bootstrap -->
-        <link rel="stylesheet" href="static/css/bootstrap.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="static/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -40,7 +40,7 @@
               <div class="row">
                 <div class="col-12">
                   <h1>Ethan Armstrong</h1>
-                  <p>This is where the summary will go. This should be multiple paragraphs about me</p>
+                  <p>I am currently a senior in high school with many diverse interests, hobbies, projects, and skills. This website is great for getting to know me.</p>
                   <p><a class="btn btn-primary btn-lg" href="/academics" role="button">Learn more</a></p>
                 </div>
               </div>
@@ -52,18 +52,20 @@
           <div class="container">
             <div class="row">
               <div class="col-4 text-center">
-                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+                <img class="mr-3 img-responsive" src="{{ url_for('static', filename='images/holder.png') }}" width = "100%" alt="Ethan Picture">
               </div>
               <div class="col-4 text-center">
-                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+                <img class="mr-3 img-responsive" src="{{ url_for('static', filename='images/holder.png') }}" width = "100%" alt="Ethan Picture">
               </div>
               <div class="col-4 text-center">
-                <img class="mr-3 img-responsive" src="static/images/holder.png" width = "100%" alt="Ethan Picture">
+                <img class="mr-3 img-responsive" src="{{ url_for('static', filename='images/holder.png') }}" width = "100%" alt="Ethan Picture">
               </div>
             </div>
           </div>
         </section>
         <hr>
+
+        <!--
         <section>
           <div class="container">
             <div class="row">
@@ -74,16 +76,18 @@
             </div>
           </div>
         </section>
+        
+        
         <section>
           <div class="container mt-2">
             <div class="row">
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="programming image">
+                    <img class="mr-3" src="{{ url_for('static', filename='images/holder.png') }}" alt="programming">
                     <div class="media-body">
                       <h5 class="mt-0 mb-1">Programming</h5>
-                      Explanation of whatever project I chose
+                      <p>Explanation of whatever project I chose</p>
                     </div>
                   </li>
                 </ul>
@@ -91,10 +95,10 @@
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Sports Image">
+                    <img class="mr-3" src="{{ url_for('static', filename='images/holder.png') }}" alt="Sports Image">
                     <div class="media-body">
                       <h5 class="mt-0 mb-1">Football</h5>
-                      Explanation of Football
+                      <p>Explanation of whatever project I chose</p>
                     </div>
                   </li>
                 </ul>
@@ -102,10 +106,10 @@
               <div class="col-md-4 col-12">
                 <ul class="list-unstyled">
                   <li class="media">
-                    <img class="mr-3" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/35X35.gif" alt="Rocketry image">
+                    <img class="mr-3" src="{{ url_for('static', filename='images/holder.png') }}" alt="Rocketry image">
                     <div class="media-body">
                       <h5 class="mt-0 mb-1">Rocketry</h5>
-                      Explanation of Rocketry
+                      <p>Explanation of whatever project I chose</p>
                     </div>
                   </li>
                 </ul>
@@ -113,86 +117,39 @@
             </div>
           </div>
         </section>
-        <!--
-        <section>
-          <div class="container">
-            <div class="row">
-              <div class="col-12 text-center">
-                <h2>Latest Work</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, et, placeat !</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 col-12 text-center">
-                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="image1">
-                <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-                <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-              </div>
-              <div class="col-md-6 col-12 text-center mt-md-0 mt-2">
-                <img class="img-fluid" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/400x400.gif" alt="iamge2">
-                <h4>Lorem ipsum dolor sit amet, consectetur elit</h4>
-                <h6>Lorem ipsum dolor sit amet, consectetur elit</h6>
-              </div>
-            </div>
-            <div class="row mt-2">
-              <div class="col-md-3 col-6"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
-              <div class="col-md-3 col-6"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt="IMAGE"></div>
-            </div>
-            <hr>
-            <div class="row">
-              <div class="col-md-3 col-6"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-              <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/images/200x200.gif" alt=""></div>
-            </div>
-          </div>
-        </section>
-        -->
+
         <hr>
-        <section>
-          <div class="container">
-            <div class="row">
-              <div class="col-12 text-center">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
-                <button type="button" class="btn btn-success">Get in touch</button>
-              </div>
+-->
+        
+      <div class="section">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-md-4 col-12"></div>
+            <div class="col-md-4 col-12">
+              <h3 class="text-center">GET IN TOUCH</h3>
+                <span>w.ethan.armstrong@gmail.com</span>
+                <br>
+                <a href="https://www.instagram.com/ethan_armstrong56/?hl=en">
+                  <img class="img-responsive mt-1 mb-1" src="{{ url_for('static', filename='images/instagram.png') }}" width = "12%" alt="Instagram">
+                </a>
+                <br>
+                <span>(949) 424-4530</span>
             </div>
+            <div class="col-md-4 col-12"></div>
           </div>
-        </section>
-        <hr>
-        <div class="section">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-12">
-                <h3 class="text-center">GET IN TOUCH</h3>
-                <address class="text-center">
-                  <strong>MyCompany, Inc.</strong><br>
-                  Sunny Autumn Plaza, Grand Coulee,<br>
-                  CA, 91308-4075, US<br>
-                  <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
-              </div>
-              <div class="col-md-6 col-12">
-                <h3 class="text-center">NEWSLETTER</h3>
-                <form>
-                  <div class="form-group col-12">
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                    <button type="submit" class="btn btn-dark mt-2">Subscribe</button>
-                  </div>
-                </form>
-              </div>
+        </div>
+      </div>
+      <hr>
+      
+      <footer class="text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <span>© 2020 by Ethan Armstrong</span>
             </div>
           </div>
         </div>
-        <hr>
+      </footer>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script language="JavaScript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="file:///C|/Users/Ethan Armstrong/AppData/Roaming/Adobe/Dreamweaver 2020/en_US/Configuration/Temp/Assets/eam7FE1.tmp/js/popper.min.js"></script>
-        <script src="static/js/bootstrap.js"></script>
       </body>
 </html>

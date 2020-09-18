@@ -1,9 +1,9 @@
 #Group Types:
-#text       : stadard paragraph on left with an image field on the right (not specifying a type will default to this)
-#list       : a bulleted list
-#video      : a video, can do path or url
-#imageGroup : a slideshow, carousel, of images. (Images should be cropped to the same dimesnions otherwise formatting will mess up) 
-#
+#text           : stadard paragraph on left with an image field on the right (not specifying a type will default to this)
+#list           : a bulleted list
+#video          : a video, can do path or url
+#imageGroup     : a slideshow, carousel, of images. (Images should be cropped to the same dimesnions otherwise formatting will mess up) 
+#imagesWithText : this is a text group but replaces the image with an imageGroup
 [
     {
         "root": "",
@@ -119,10 +119,19 @@
                             "size": "70%",
                         },
                         {
-                            "type": "imageGroup",
-                            "text": ["rocketry/ANARC.png", "holder2.png", "holder.png", "holder.png", "holder2.png", "holder.png", "holder2.png",],
-                            "size": "70%",
+                            "type": "textWithImages",
+                            "text": "this is a paragraph describing the images on the right. look at the images on the right",
+                            "images": ["holder.png", "holder.png", "holder.png", "holder.png", "holder.png",],
+                            "size": "40%",
+                            "autoSlide": "10000", #false for no slide, time in ms for slide
                         },
+                        {
+                            "type": "imageGroup",
+                            "images": ["holder.png", "holder.png", "holder.png", "holder.png", "holder.png",],
+                            "size": "40%",
+                            "autoSlide": "10000", #false for no slide, time in ms for slide
+                        },
+                        
 
                     ],
                 },

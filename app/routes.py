@@ -86,6 +86,16 @@ def getPageData(page, root = ""):
                     group["imLink"]
                 except:
                     group["imLink"] = ""
+
+                try:
+                    group["images"]
+                except:
+                    group["images"] = "[]"
+
+                try:
+                    group["autoSlide"]
+                except:
+                    group["autoSlide"] = "false"
             
     print(data)
     return data

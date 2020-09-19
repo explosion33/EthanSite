@@ -45,56 +45,56 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
 ### types of group
 **textImage**: text on left image on right (defualt when type is not defined)
 
-text: the text content for the text field
+  text: the text content for the text field
 
-image: image path. Starts in static/images
+  image: image path. Starts in static/images
 
-size: size of the image in % (25%)
+  size: size of the image in % (25%)
+  
+  link: the link content for the text
 
-link: the link content for the text
-
-imLink: the link for the image
+  imLink: the link for the image
 
 
 **text**: regular paragraph text
 
-text: the text content for the text field
+  text: the text content for the text field
 
-link: the link content for the text
+  link: the link content for the text
 
 
 **list**: a bulleted list
 
-text: list of text to be bulleted
+  text: list of text to be bulleted
 
 
 **video**: A centered video (file only)
 
-aspect: the aspect ratio of the video (5by10)
+  aspect: the aspect ratio of the video (5by10)
 
-path: the video path. Starts in static/videos
+  path: the video path. Starts in static/videos
 
 
 **imageGroup**: a carousel of images
 
-images: list of image paths. Path starts in static/Images
+  images: list of image paths. Path starts in static/Images
 
-size: size of the carousel (25%)
+  size: size of the carousel (25%)
 
-autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
+  autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
 
 
 **textWithImages**: text on left imageGroup on the right
 
-text: the text content for the text field
+  text: the text content for the text field
 
-images: list of image paths. Path starts in static/Images
+  images: list of image paths. Path starts in static/Images
 
-size: size of the carousel (25%)
+  size: size of the carousel (25%)
 
-autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
+  autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
 
 
 **break**: inserts specified number of <br> tags
 
-amount: number of tags (2)
+  amount: number of tags (2)

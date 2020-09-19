@@ -45,15 +45,15 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
 ### types of group
 **textImage**: text on left image on right (defualt when type is not defined)
 
-  text: the text content for the text field
+  &emsp;text: the text content for the text field
 
-  image: image path. Starts in static/images
+  &emsp;image: image path. Starts in static/images
 
-  size: size of the image in % (25%)
+  &emsp;size: size of the image in % (25%)
   
-  link: the link content for the text
+  &emsp;link: the link content for the text
 
-  imLink: the link for the image
+  &emsp;imLink: the link for the image
 
 
 **text**: regular paragraph text

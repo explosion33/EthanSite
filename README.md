@@ -58,43 +58,43 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
 
 **text**: regular paragraph text
 
-  text: the text content for the text field
+  &emsp;text: the text content for the text field
 
-  link: the link content for the text
+  &emsp;link: the link content for the text
 
 
 **list**: a bulleted list
 
-  text: list of text to be bulleted
+  &emsp;text: list of text to be bulleted
 
 
 **video**: A centered video (file only)
 
-  aspect: the aspect ratio of the video (5by10)
+  &emsp;aspect: the aspect ratio of the video (5by10)
 
-  path: the video path. Starts in static/videos
+  &emsp;path: the video path. Starts in static/videos
 
 
 **imageGroup**: a carousel of images
 
-  images: list of image paths. Path starts in static/Images
+  &emsp;images: list of image paths. Path starts in static/Images
 
-  size: size of the carousel (25%)
+  &emsp;size: size of the carousel (25%)
 
-  autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
+  &emsp;autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
 
 
 **textWithImages**: text on left imageGroup on the right
 
-  text: the text content for the text field
+  &emsp;text: the text content for the text field
 
-  images: list of image paths. Path starts in static/Images
+  &emsp;images: list of image paths. Path starts in static/Images
 
-  size: size of the carousel (25%)
+  &emsp;size: size of the carousel (25%)
 
-  autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
+  &emsp;autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
 
 
 **break**: inserts specified number of <br> tags
 
-  amount: number of tags (2)
+  &emsp;amount: number of tags (2)

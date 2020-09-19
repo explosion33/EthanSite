@@ -1,5 +1,5 @@
 # EthanSite
-## My personal website
+My personal website
 
 ### Setup
 #### dependancies

@@ -95,6 +95,6 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
   &emsp;autoSlide: speed at which to scroll through images. use false to disable slide. (false by default)
 
 
-**break**: inserts specified number of <br> tags
+**break**: inserts specified number of ```<br>``` tags
 
   &emsp;amount: number of tags (2)

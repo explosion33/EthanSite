@@ -1,18 +1,19 @@
-# code for my personal website
+# EthanSite
+## My personal website
 
-## Setup
-### dependancies
+### Setup
+#### dependancies
 ```
 pip install flask==1.1.2
 pip install Werkzeug==0.16.0
 ```
 
-### run
+#### run
 ```
 python main.py
 ```
 
-## dynamic page creating
+### dynamic page creating
 
 pages are created dynamicaly using the file pageData.txt the structure is as follows
 ```
@@ -42,7 +43,7 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
 ]
 ```
 
-### types of group
+#### types of group
 **textImage**: text on left image on right (defualt when type is not defined)
 
   &emsp;text: the text content for the text field

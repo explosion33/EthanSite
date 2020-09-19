@@ -3,10 +3,11 @@
 #list           : a bulleted list
 #video          : a video, can do path or url
 #imageGroup     : a slideshow, carousel, of images. (Images should be cropped to the same dimesnions otherwise formatting will mess up) 
-#imagesWithText : this is a text group but replaces the image with an imageGroup
+#textWithImages : this is a text group but replaces the image with an imageGroup
 [
     {
         "root": "",
+        "ID": "academic",
         "title": "Academic Highlights",
         "sections": [
                 {
@@ -40,9 +41,8 @@
                     "title": "Work Experience",
                     "groups": [
                         {
+                            "type": "text",
                             "text": "I am a self-employed tutor. I tutor two highschoolers in Math, and Science and have been doing so for four years. On top of Tutoring, I also do occasional Freelance projects and provide technical support. These range from fixing my neighbors computer to designing websites for my school's football team",
-                            "image": "blank.png",
-                            "size": "1%"
                         },
 
                     ],
@@ -53,6 +53,7 @@
     {
         "root": "",
         "title": "Skills",
+        "ID": "skills",
         "sections": [
                 {
                     "title": "Programming",
@@ -83,6 +84,7 @@
 
     {
         "root": "",
+        "ID": "rocketry",
         "title": "Rocketry",
         "sections": [
                 {
@@ -118,25 +120,76 @@
                             "image": "rocketry/ANARC.png",
                             "size": "70%",
                         },
-                        {
-                            "type": "textWithImages",
-                            "text": "this is a paragraph describing the images on the right. look at the images on the right",
-                            "images": ["holder.png", "holder.png", "holder.png", "holder.png", "holder.png",],
-                            "size": "40%",
-                            "autoSlide": "10000", #false for no slide, time in ms for slide
-                        },
-                        {
-                            "type": "imageGroup",
-                            "images": ["holder.png", "holder.png", "holder.png", "holder.png", "holder.png",],
-                            "size": "40%",
-                            "autoSlide": "10000", #false for no slide, time in ms for slide
-                        },
-                        
-
                     ],
                 },
 
         ],
     }, #Rocketry page
+
+    {
+        "root": "",
+        "ID": "projects",
+        "title": "Projects",
+        "links": [
+            {
+                "title": "Personal Computer",
+                "link": "pc",
+                "image": "holder.png",
+            },
+            {
+                "title": "Bitcoin Miners",
+                "link": "miners",
+                "image": "holder.png",
+            },
+            {
+                "title": "Battery",
+                "link": "battery",
+                "image": "holder.png",
+            },
+            {
+                "title": "Car Audio System",
+                "link": "bt_audio",
+                "image": "holder.png",
+            },
+            {
+                "title": "3D Prints",
+                "link": "printing",
+                "image": "holder.png",
+            },
+            {
+                "title": "Videos",
+                "link": "editing",
+                "image": "holder.png",
+            },
+        ]
+    }, #Projects main page
+
+    {
+        "root": "projects",
+        "ID": "pc",
+        "title": "Personal Computer Build",
+        "sections": [
+            {
+                "title": "",
+                "groups": [
+                    {
+                        "type": "textWithImages",
+                        "text": "I got my first computer in 2015, it was an old HP that barely allowed me to play games and do small projects. I had it for two years until it quickly fell behind the advance of technology and would no longer function. I did some research, and found that building a computer is extremely easy (it wasnt).",
+                        "images": ["holder.png", "holder.png"],
+                        "size": "40%",
+                    },
+                    {
+                        "type": "text",
+                        "text": "I told my parents that for christmas I wanted computer parts. I spent all of christmas day assembling my computer, and the following week getting it to boot, but I finally got it. I have now had my computer since 2017 and it has facilated my passions of programming, and video editing.",
+                    },
+                    {
+                        "type": "break",
+                        "amount": 2,
+                    },
+
+                ],
+            },
+        ],
+    }, #Projects PC Page
 
 ]

@@ -53,7 +53,7 @@
             <div class="container">
               <h4>{{section.title}}</h4>
               {% for group in section.groups %}
-                {% if group.type == "text" %}
+                {% if group.type == "textImage" %}
                   <div class="row mb-2">
                       <div class="col-md-6 col-12">
                         {% if group.link != "" %}
@@ -73,8 +73,22 @@
                           </a>
                         {% endif %}
                       </div>
-                    
                   </div>
+
+                {% elif group.type == "text" %}
+                  <div class="row mb-2">
+                    <div class="col-12">
+                      {% if group.link != "" %}
+                        <a href="{{group.link}}">
+                      {% endif %}
+                      <p>{{group.text}}</p>
+                      {% if group.link != "" %}
+                        </a>
+                      {% endif %}
+                    </div>
+                  </div>
+                    
+                  
                 {% elif group.type == "list" %}
                   <ul>
                     {% for content in group.text %}
@@ -164,6 +178,10 @@
                       </div>
                     </div>
                   </div>
+                {% elif group.type == "break" %}
+                  {% for i in range(group.amount)%}
+                    <br>
+                  {% endfor %}
 
                 {% endif %}
               {% endfor %}

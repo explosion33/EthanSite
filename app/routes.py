@@ -12,6 +12,10 @@ log.setLevel(logging.ERROR)
 
 
 def getNavbar(route=None):
+    """
+    getNavbar(route): returns a navbar dictionary useful for passing to html\n
+    route : the routing of the page, used to highlight the active page
+    """
     navbar=[
         {
             "link": "/academics",
@@ -52,7 +56,12 @@ def getNavbar(route=None):
     
     return navbar
 
-def getPageData(page, root = ""):
+def getPageData(ID, root = ""):
+    """
+    getPageData(ID, root) : reads teh data from a txt file, adds missing fields and returns for use in dynamic pages\n
+    ID   : the page ID, used to search for page
+    root : the root field of the page, use if you have pages with the same name
+    """
     f = open("pageData.txt", "r")
     t = f.read()
     f.close()
@@ -60,42 +69,51 @@ def getPageData(page, root = ""):
 
     data = None
     for d in datas:
-        if root in d["root"] and d["title"] == page:
+        if root in d["root"] and d["ID"] == ID:
             data = d
             break
 
     if data:
-        for section in data["sections"]:
-            for group in section["groups"]:
-                try:
-                    group["size"]
-                except:
-                    group["size"] = "50%"
-                
-                try:
-                    group["type"]
-                except:
-                    group["type"] = "text"
+        try:
+            data["sections"]
+            page = True
+        except:
+            page = False
+        
+        if page:
+            for section in data["sections"]:
+                for group in section["groups"]:
+                    try: #size
+                        group["size"]
+                    except:
+                        group["size"] = "50%"
+                    
+                    try: #type
+                        group["type"]
+                    except:
+                        group["type"] = "textImage"
 
-                try:
-                    group["link"]
-                except:
-                    group["link"] = ""
+                    try: #link
+                        group["link"]
+                    except:
+                        group["link"] = ""
 
-                try:
-                    group["imLink"]
-                except:
-                    group["imLink"] = ""
+                    try: #imLink
+                        group["imLink"]
+                    except:
+                        group["imLink"] = ""
 
-                try:
-                    group["images"]
-                except:
-                    group["images"] = "[]"
+                    try: #images
+                        group["images"]
+                    except:
+                        group["images"] = "[]"
 
-                try:
-                    group["autoSlide"]
-                except:
-                    group["autoSlide"] = "false"
+                    try: #autoSlide
+                        group["autoSlide"]
+                    except:
+                        group["autoSlide"] = "false"
+                    
+
             
     print(data)
     return data
@@ -106,17 +124,16 @@ def home():
 
 @app.route('/academics', methods=['GET', 'POST'])
 def academics():
-    data = getPageData("Academic Highlights")
+    data = getPageData("academic")
 
     if data:
         return render_template("page.html", navbar=getNavbar(request.path), data=data)
     else:
         abort(404)    
 
-
 @app.route('/skills', methods=['GET', 'POST'])
 def programming():
-    data = getPageData("Skills")
+    data = getPageData("skills")
 
     if data:
         return render_template("page.html", navbar=getNavbar(request.path), data=data)
@@ -127,57 +144,42 @@ def programming():
 
 @app.route('/projects', methods=['GET', 'POST'])
 def projects():
-    data = {
-        'title': "Projects",
-        'elements': [
-            {
-                'image': "holder.png",
-                'title': "test",
-                "link": "academics/test"
-            },
-            {
-                'image': "holder.png",
-                'title': "test2",
-                "link": "academics/test2"
-            },
-            {
-                'image': "holder.png",
-                'title': "test3",
-                "link": "academics/test3"
-            },
-            {
-                'image': "holder.png",
-                'title': "test4",
-                "link": "academics/test4"
-            },
-            {
-                'image': "holder.png",
-                'title': "test5",
-                "link": "academics/test5"
-            },
-            {
-                'image': "holder.png",
-                'title': "test6",
-                "link": "academics/test6"
-            },
-        ],
-    }
-    return render_template("list.html", navbar=getNavbar(request.path), data=data)
+    data = getPageData("projects")
+    data["origin"] = "projects/"
+
+    if data:
+        return render_template("list.html", navbar=getNavbar(request.path), data=data)
+    else:
+        abort(404)    
+
+@app.route('/projects/<page>', methods=['GET', 'POST'])
+def projectsData(page):
+    data = getPageData(page, "projects")
+
+    if data:
+        return render_template("page.html", navbar=getNavbar(request.path), data=data)
+    else:
+        abort(404) 
+    
 
 @app.route('/volunteering', methods=['GET', 'POST'])
 def volunteering():
-    return render_template("list.html", navbar=getNavbar(request.path))
-
-@app.route('/rocketry', methods=['GET', 'POST'])
-def rocketry():
-    data = getPageData("Rocketry")
+    data = getPageData("volunteering")
 
     if data:
         return render_template("page.html", navbar=getNavbar(request.path), data=data)
     else:
         abort(404)    
 
-    return render_template("list.html", navbar=getNavbar(request.path), data=data)
+
+@app.route('/rocketry', methods=['GET', 'POST'])
+def rocketry():
+    data = getPageData("rocketry")
+
+    if data:
+        return render_template("page.html", navbar=getNavbar(request.path), data=data)
+    else:
+        abort(404)    
 
 @app.route('/sports', methods=['GET', 'POST'])
 def sports():

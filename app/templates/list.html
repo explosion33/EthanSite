@@ -52,12 +52,12 @@
         <section>
           <div class="container">
             <div class="row">
-              {% for element in data.elements %}
-                  <div class="col-md-3 col-12 text-center">
-                    <a style="color: inherit;" href="{{element.link}}">
+              {% for element in data.links %}
+                  <div class="col-md-3 col-12 text-center mb-5"">
+                    <a class= " style="color: inherit;" href="{{data.origin}}{{element.link}}">
                       <img class="img-responsive" src="static/images/{{element.image}}" width = "100%" alt="Ethan Picture">
                       
-                      <h3>{{element.title}}</h3>
+                      <h4 class="carousel-caption">{{element.title}}</h4>
                     </a>
                   </div>
                 

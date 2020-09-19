@@ -43,7 +43,6 @@ pages are created dynamicaly using the file pageData.txt the structure is as fol
 ```
 
 ### types of group
-```
 **textImage**: text on left image on right (defualt when type is not defined)
 text: the text content for the text field
 image: image path. Starts in static/images
@@ -75,4 +74,3 @@ autoSlide: speed at which to scroll through images. use false to disable slide. 
 
 **break**: inserts specified number of <br> tags
 amount: number of tags (2)
-```

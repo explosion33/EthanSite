@@ -82,6 +82,11 @@ def getPageData(ID, root = ""):
         
         if page:
             for section in data["sections"]:
+                try: #Seperater
+                    section["seperater"]
+                except:
+                    section["seperater"] = True
+
                 for group in section["groups"]:
                     try: #size
                         group["size"]

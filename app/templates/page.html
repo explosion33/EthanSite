@@ -187,7 +187,9 @@
               {% endfor %}
             </div>
           </section>
-          <hr>
+          {% if section.seperater %}
+            <hr>
+          {% endif %}
         {% endfor %}
 
         <footer class="text-center">

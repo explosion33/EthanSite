@@ -65,11 +65,11 @@
                         },
                         {
                             "type": "list",
-                            "text": ["Hand Writing Generator", "Headless Bluetooth Controller", "Remote File Transfer", "Car Audio System", "ANHS Registration Site"],
+                            "text": ["Hand Writing Generator", "Headless Bluetooth Controller", "Remote File Transfer", "Car Audio System", "ANHS Registration Site", "Remakes of popular games", "Home IOT Programs"],
                         },
                         {
                             "type": "text",
-                            "text": "https://github.com/explosion33",
+                            "text": "GitHub",
                             "link": "https://github.com/explosion33",
                             "image": "holder.png",
                             "size": "1%"
@@ -97,14 +97,14 @@
                             "size": "40%",
                         },
                         {
-                            "text": "We eventually started moving up, we built fiberglass rockets with electroinc shcute deoplyment and telemetry. We drove hours to get to launch sites and spent every day during summer building and tinkering. We launched up to a class two rocket, but had to stop when things got too busy with school and sports",
+                            "text": "We eventually started moving up, we built fiberglass rockets with electroinc parachute deoplyment and telemetry. We drove hours to get to launch sites and spent every day during summer building and tinkering. We launched up to a class two rocket, but had to stop when things got too busy with school and sports",
                             "image": "holder.png",
                             "size": "40%",
                         },
 
                         {
                             "type": "video",
-                            "path": "schuteTest.mp4",
+                            "path": "chuteTest.mp4",
                             "size": "40%",
                             "aspect": "16by9",
                         },
@@ -165,6 +165,66 @@
     }, #Projects main page
 
     {
+            "root": "",
+            "ID": "volunteering",
+            "title": "Volunteering",
+            "sections": [
+                    {
+                        "title": "Why I Volunteer",
+                        "groups": [
+                            {
+                                "text": "Volunteering is extremely rewarding for me, not only do I get to put my skills to use and spend time with my friends, I also get to give back to my community. I have had many oppurtunities over the years, weather it be something technical or just putting in labor-hours to clean the field, I always have fun.",
+                                "image": "holder.png",
+                                "size": "30%",
+                            },
+                        ],
+                    },
+                    {
+                        "title": "Aliso Niguel High School",
+                        "seperater": False,
+                        "groups": [
+                            {
+                                "text": "Most of my volunteering comes from my highschool. I have participated in multiple field cleanups. Constructed a storage cage for ANHS Football, and integrated a registration system for the players and parents of the Football team, into their website.",
+                                "image": "holder.png",
+                                "size": "30%",
+                            },
+                            {
+                                "type": "text",
+                                "text": "I have also served as tech-support for Football and Cheer. I was webmaster for pep-squad when my sister was on the team, and helped the webmaster for the football team. I try to lend a hand whenever I can, even if i dont get official hours for it, staying late to help clean-up and helping the parents when they need stuff carried are both great examples.",
+                            },
+                            {
+                                "type": "break",
+                                "amount": 2,
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Other Volunteer Oppurtunities",
+                        "groups": [
+                            {
+                                "type": "text",
+                                "text": "I have also helped two of my friends with their Eagle scout projects. For one we spent about 4 hours, building a fence. We had to dig out the holes, fill them with concrete then hammer in the posts, we did this for the entire street length. For the other, we built gardens at a pre-school in costa-mesa. We constructed small garden boxes, filled them with dirt and planted plants, we built 8 boxes in the course of 3 hours.",
+                                "image": "holder.png",
+                                "size": "30%",
+                            },
+                        
+                        ]
+                    },
+                    {
+                        "title": "Recognition",
+                        "groups": [
+                            {
+                                "text": "For my efforts in volunteering I have been awarded two Teal Cares awards from Aliso Niguel High School. These awards signify that I have completed 40 hours, and are handed out once per year.",
+                                "image": "holder.png",
+                                "size": "30%",
+                            },
+                        
+                        ]
+                    },
+            ]    
+    }, #Volunteering page
+
+    {
         "root": "projects",
         "ID": "pc",
         "title": "Personal Computer Build",
@@ -182,14 +242,101 @@
                         "type": "text",
                         "text": "I told my parents that for christmas I wanted computer parts. I spent all of christmas day assembling my computer, and the following week getting it to boot, but I finally got it. I have now had my computer since 2017 and it has facilated my passions of programming, and video editing.",
                     },
-                    {
-                        "type": "break",
-                        "amount": 2,
-                    },
 
                 ],
             },
         ],
     }, #Projects PC Page
 
+    {
+        "root": "projects",
+        "ID": "miners",
+        "title": "Bitcoin Miners",
+        "sections": [
+            {
+                "title": "",
+                "groups": [
+                    {
+                        "type": "textWithImages",
+                        "text": "My friend beau got me into Bitcoin mining when he asked me if I was doing it, i did some research, installed an app on my computer and made a dollar in one day. I decided I wanted to build a dedicated miner.",
+                        "images": ["holder.png", "holder.png"],
+                        "size": "40%",
+                    },
+                    {
+                        "type": "text",
+                        "text": "I built a few bitcoin miners, and spent entire weekends maintaining them, they break a lot. I built custom software to monitor and control them remotely and stored all my earning in a trezot wallet. All in all, i've made around 2k in Bitcoin which I plan to save for college.",
+                    },
+                ],
+            },
+        ],
+    }, #Projects Bitcoin Page
+
+    {
+        "root": "projects",
+        "ID": "battery",
+        "title": "Backup Battery",
+        "sections": [
+            {
+                "title": "",
+                "groups": [
+                    {
+                        "type": "textWithImages",
+                        "text": "Due to power outages in California and the cost of commercial house batteries, my dad and i decided to build a test battery pack so in the future we could build a bigger one to power our house. We got pre-used 18650 battery cells from decommissioned router batteries, and integrated them into a pelican case. The batteries were positioned seven in series to create a 24V 2200KwH battery unit. I wired a monitoring screen, 12V transformer, banana plug outputs, and a cutoff switch. I also made custom cables so I could integrate easier charging, and usage with the small inverter i use in my car.",
+                        "images": ["holder.png", "holder.png"],
+                        "size": "40%",
+                    },
+                    {
+                        "type": "text",
+                        "text": "This battery recently proved useful when we had a power outage in our house during the heat wave. I used the battery to power fans in my room, then to charge my familys phones during the night. The battery which wasnt only 25% charged lasted 10 hours before eventually dying.",
+                    },
+                ],
+            },
+        ],
+    }, #Projects Bitcoin Page
+
+    {
+        "root": "projects",
+        "ID": "bt_audio",
+        "title": "Car Audio System",
+        "sections": [
+            {
+                "title": "",
+                "groups": [
+                    {
+                        "type": "textWithImages",
+                        "text": "my car is from 2011 and is the last car made by nissan that dosent include a tech package. With the new update to the IPhone that removed the headphone jack I couldnt charge my phone and play music at the same time. I decided to use one of our raspberry pi's to create a bluetooth audi sync. I spent a month perfecting the bluetooth sync, the python source control and website control panel. After that I worked on running postive lines through the fuse box in my car and soldered data lines to the aux jack already in my car. I also made a circuit board to convert the aux out to the 3 cable in on my car.",
+                        "images": ["holder.png", "holder.png"],
+                        "size": "40%",
+                    },
+                    {
+                        "type": "text",
+                        "text": "The system works perfectly, when I turn on my car my phone auto-connects to bluetooth and plays music. I can even let my friends play music by opening the website and allowing them to pair.",
+                    },
+                ],
+            },
+        ],
+    }, #Projects Bitcoin Page
+
+    {
+        "root": "projects",
+        "ID": "printing",
+        "title": "3D Printing",
+        "sections": [
+            {
+                "title": "",
+                "groups": [
+                    {
+                        "type": "textWithImages",
+                        "text": "my car is from 2011 and is the last car made by nissan that dosent include a tech package. With the new update to the IPhone that removed the headphone jack I couldnt charge my phone and play music at the same time. I decided to use one of our raspberry pi's to create a bluetooth audi sync. I spent a month perfecting the bluetooth sync, the python source control and website control panel. After that I worked on running postive lines through the fuse box in my car and soldered data lines to the aux jack already in my car. I also made a circuit board to convert the aux out to the 3 cable in on my car.",
+                        "images": ["holder.png", "holder.png"],
+                        "size": "40%",
+                    },
+                    {
+                        "type": "text",
+                        "text": "The system works perfectly, when I turn on my car my phone auto-connects to bluetooth and plays music. I can even let my friends play music by opening the website and allowing them to pair.",
+                    },
+                ],
+            },
+        ],
+    }, #Projects Bitcoin Page
 ]
